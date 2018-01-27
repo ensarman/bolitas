@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Monedas.png" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[node name="BolaNodo" type="StaticBody2D"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 0.976039, 0, 0, 0.606227, 0.350876, 2.57733 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="BolaSprite" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 0.350876, 2.57733 )
+transform/scale = Vector2( 0.976039, 0.606227 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+
