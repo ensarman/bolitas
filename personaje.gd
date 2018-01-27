@@ -13,6 +13,10 @@ const DIRECTION = {
 	UP=Vector2(0,-1),
 	DOWN=Vector2(0,1)
 }
+
+# enum para identificar a ambos jugadores
+enum { PLAYER_1, PLAYER_2 }
+
 func _integrate_forces(state):
 	#fuerza final
 	var final_force = Vector2()
@@ -37,3 +41,23 @@ func _integrate_forces(state):
 	
 func apply_force(state):
 	pass
+	
+func check_movement(player):
+	"""
+	Mueve al jugador dependiendo si player es PLAYER_1 o PLAYER_2
+	"""
+	if player==PLAYER_1:
+		if (Input.is_action_pressed("move_left")):
+			directional_force += DIRECTION.LEFT
+		if (Input.is_action_pressed("move_right")):
+			directional_force += DIRECTION.RIGHT
+		if (Input.is_action_pressed("move_jump")):
+			directional_force += DIRECTION.UP
+	elif player==PLAYER_2:
+		if (Input.is_action_pressed("ui_left")):
+			directional_force += DIRECTION.LEFT
+		if (Input.is_action_pressed("ui_right")):
+			directional_force += DIRECTION.RIGHT
+		if (Input.is_action_pressed("ui_jump")):
+			directional_force += DIRECTION.UP
+		
