@@ -7,6 +7,9 @@ func _ready():
 	set_contact_monitor( true )
 	set_max_contacts_reported( 5 )
 	connect("body_enter",self,"collision_now")
+	life=5
+	pass
+
 
 func collision_now(who):
 	print(self.get_name()," is colliding with ",who.get_name())

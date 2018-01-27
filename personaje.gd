@@ -3,6 +3,7 @@ extends RigidBody2D
 var acceleration = 1000
 var top_move_speed = 200
 var top_jump_speed = 400
+var life=5
 
 var directional_force = Vector2()
 
@@ -41,7 +42,7 @@ func _integrate_forces(state):
 	
 func apply_force(state):
 	pass
-	
+
 func check_movement(player):
 	"""
 	Mueve al jugador dependiendo si player es PLAYER_1 o PLAYER_2
@@ -61,3 +62,5 @@ func check_movement(player):
 		if (Input.is_action_pressed("ui_jump")):
 			directional_force += DIRECTION.UP
 		
+func bajarVida():
+	life-=1

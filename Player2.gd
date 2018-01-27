@@ -4,6 +4,7 @@ func _ready():
 #	acceleration = 1000
 #	top_move_speed = 200
 #	top_jump_speed = 300
+	life=5
 	pass
 
 
