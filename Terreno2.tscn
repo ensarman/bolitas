@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=1]
+[gd_scene load_steps=65 format=1]
 
 [ext_resource path="res://Terreno2.gd" type="Script" id=1]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
@@ -12,6 +12,9 @@
 [ext_resource path="res://Pincho_bot.png" type="Texture" id=10]
 [ext_resource path="res://Enemigo.png" type="Texture" id=11]
 [ext_resource path="res://temporizador.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Musica/Battle_Theme.wav" type="Sample" id=13]
+[ext_resource path="res://Musica/click.wav" type="Sample" id=14]
+[ext_resource path="res://Musica/hurt04.wav" type="Sample" id=15]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -248,13 +251,37 @@ points = Vector2Array( 8.77521, 17.9978, -6.57123, 18.0831, 14.2452, 15.3817, 11
 custom_solver_bias = 0.0
 extents = Vector2( 629.596, 10 )
 
+[sub_resource type="SampleLibrary" id=48]
+
+samples/Battle_Theme = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 13 )
+}
+
+[sub_resource type="SampleLibrary" id=49]
+
+samples/click = {
+"db": 10.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 14 )
+}
+samples/hurt04 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 15 )
+}
+
 [node name="Esena" type="Node"]
 
 script/script = ExtResource( 1 )
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 
-tile_data = IntArray( 0, 2, 19, 2, 27, 2, 65536, 2, 65555, 2, 65563, 2, 131072, 2, 131073, 1, 131074, 1, 131082, 9, 131091, 2, 131097, 1, 131098, 1, 131099, 2, 196608, 2, 196618, 8, 196627, 2, 196635, 2, 262144, 2, 262154, 8, 262157, 9, 262163, 2, 262171, 2, 327680, 2, 327690, 8, 327693, 7, 327699, 2, 327707, 2, 393216, 2, 393224, 0, 393225, 0, 393226, 8, 393229, 0, 393230, 0, 393231, 0, 393235, 2, 393243, 2, 458752, 2, 458755, 14, 458756, 14, 458757, 14, 458758, 12, 458762, 8, 458771, 2, 458779, 2, 524288, 2, 524292, 9, 524295, 12, 524298, 8, 524300, 9, 524303, 0, 524304, 0, 524305, 0, 524306, 0, 524307, 2, 524315, 2, 589824, 2, 589828, 8, 589830, 11, 589832, 12, 589834, 8, 589836, 8, 589843, 2, 589851, 2, 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655364, 0, 655365, 0, 655366, 0, 655367, 0, 655368, 0, 655369, 0, 655370, 0, 655371, 0, 655372, 0, 655373, 0, 655374, 0, 655375, 0, 655376, 0, 655377, 0, 655378, 0, 655379, 0, 655380, 0, 655381, 0, 655382, 0, 655383, 0, 655384, 0, 655385, 0, 655386, 0, 655387, 0 )
+tile_data = IntArray( 0, 2, 19, 2, 65536, 2, 65555, 2, 131072, 2, 131073, 1, 131074, 1, 131082, 9, 131091, 2, 196608, 2, 196618, 8, 196627, 2, 262144, 2, 262154, 8, 262157, 9, 262163, 2, 327680, 2, 327690, 8, 327693, 7, 327699, 2, 393216, 2, 393224, 0, 393225, 0, 393226, 8, 393229, 0, 393230, 0, 393231, 0, 393235, 2, 458752, 2, 458755, 14, 458756, 14, 458757, 14, 458758, 12, 458762, 8, 458771, 2, 524288, 2, 524292, 9, 524295, 12, 524298, 8, 524300, 9, 524303, 0, 524304, 0, 524305, 0, 524306, 0, 524307, 2, 589824, 2, 589828, 8, 589830, 11, 589832, 12, 589834, 8, 589836, 8, 589843, 2, 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655364, 0, 655365, 0, 655366, 0, 655367, 0, 655368, 0, 655369, 0, 655370, 0, 655371, 0, 655372, 0, 655373, 0, 655374, 0, 655375, 0, 655376, 0, 655377, 0, 655378, 0, 655379, 0 )
 
 [node name="Player2" parent="." instance=ExtResource( 3 )]
 
@@ -1201,5 +1228,27 @@ trigger = false
 _update_shape_index = 0
 
 [node name="temporizador" parent="." instance=ExtResource( 12 )]
+
+[node name="SamplePlayer2D" type="SamplePlayer2D" parent="."]
+
+params/volume_db = 0.0
+params/pitch_scale = 1.0
+params/attenuation/min_distance = 1.0
+params/attenuation/max_distance = 2048.0
+params/attenuation/distance_exp = 1.0
+config/polyphony = 1
+config/samples = SubResource( 48 )
+config/pitch_random = 0.0
+
+[node name="SamplePlayer2D 2" type="SamplePlayer2D" parent="."]
+
+params/volume_db = 0.0
+params/pitch_scale = 1.0
+params/attenuation/min_distance = 1.0
+params/attenuation/max_distance = 2048.0
+params/attenuation/distance_exp = 1.0
+config/polyphony = 1
+config/samples = SubResource( 49 )
+config/pitch_random = 0.0
 
 

@@ -39,6 +39,7 @@ func collision_now(who):
 func AjustaVida_2(Personaje_Origen):
 	# FIXME: el problema es en la clase personaje.gd, 
 	# el valor inicial de PLAYER_ORIGEN
+	get_parent().get_node("SamplePlayer2D 2").play("hurt04")
 	Personaje_Origen -= 1 
 	if Personaje_Origen == global.PLAYER_1:
 		print("player1")

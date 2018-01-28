@@ -6,6 +6,7 @@ func _ready():
 	global.score2=0
 	global.VIDA1=5
 	global.VIDA2=5
+	get_node("SamplePlayer2D").play("Battle_Theme")
 	set_process(true)
 	pass
 

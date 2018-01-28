@@ -41,6 +41,7 @@ func cambiar_estado(nuevo_estado):
 
 
 func AjustaVida(Personaje_Origen):
+	get_parent().get_node("SamplePlayer2D 2").play("click")
 	if Personaje_Origen == global.PLAYER_1:
 		if global.ESTADO_NEUTRAL != estado:
 			global.VIDA2 -=1
