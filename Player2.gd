@@ -11,10 +11,10 @@ func animate():
 			sprite.set_frame(sprite.get_frame()+1)
 		else:
 			sprite.set_frame(0)
-	if (Input.is_action_pressed("move_left")):
+	if (Input.is_action_pressed("ui_left")):
 		if (!sprite.is_flipped_h ()):
 			sprite.set_flip_h (true)
-	if (Input.is_action_pressed("move_right")):
+	if (Input.is_action_pressed("ui_right")):
 		if (sprite.is_flipped_h ()):
 			sprite.set_flip_h (false)
 			
