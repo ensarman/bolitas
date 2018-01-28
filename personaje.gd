@@ -29,6 +29,8 @@ func collision_now(who):
 #	if (who.get_name() == "BolaNodo"):
 	if (who.get_name().substr(0,8) == "BolaNodo"):
 			who.cambiar_estado(PLAYER_ORIGEN)
+	if (who.get_name().substr(0,7) == "Enemigo"):
+			who.AjustaVida_2(PLAYER_ORIGEN)
 
 func _integrate_forces(state):
 	#fuerza final
