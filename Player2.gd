@@ -4,6 +4,7 @@ func _ready():
 #	acceleration = 1000
 #	top_move_speed = 200
 #	top_jump_speed = 300
+	life=5
 	pass
 
 onready var sprite = get_node("Sprite")
@@ -24,13 +25,3 @@ func animate():
 func apply_force(state):
 	check_movement(PLAYER_2)
 	animate()
-	"""
-	if (sprite.get_vframes()<6):
-		sprite.set_vframes(sprite.get_vframes()+2)
-	else:
-		if(sprite.get_hframes()<6):
-			sprite.set_vframes(2)
-			sprite.set_hframes(sprite.get_hframes()+3)
-		else:
-			sprite.set_hframes(3)
-		"""
