@@ -1,6 +1,7 @@
 extends Node
 
 func _ready():
+	get_node("SamplePlayer2D").play("Battle_Theme")
 	set_process(true)
 	pass
 
