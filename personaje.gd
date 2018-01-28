@@ -54,10 +54,12 @@ func check_movement(player):
 		if (Input.is_action_pressed("move_jump")):
 			directional_force += DIRECTION.UP
 	elif player==PLAYER_2:
-		if (Input.is_action_pressed("ui_left")):
-			directional_force += DIRECTION.LEFT
-		if (Input.is_action_pressed("ui_right")):
-			directional_force += DIRECTION.RIGHT
-		if (Input.is_action_pressed("ui_jump")):
-			directional_force += DIRECTION.UP
+		#if (Input.is_key_pressed(32)): # tecla espacio 
+			if (Input.is_action_pressed("ui_left")):
+				directional_force += DIRECTION.LEFT
+			if (Input.is_action_pressed("ui_right")):
+				directional_force += DIRECTION.RIGHT
+			if (Input.is_action_pressed("ui_jump")):
+				directional_force += DIRECTION.UP
+			
 		
