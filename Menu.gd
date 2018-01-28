@@ -9,9 +9,14 @@ func _ready():
 	# Initialization here
 	pass
 
-func _on_TextureButton_pressed():
-	get_tree().change_scene("res://Terreno.tscn")
-
 
 func _on_salir_pressed():
 	get_tree().quit()
+
+
+func _on_esc1_pressed():
+	get_tree().change_scene("res://Terreno.tscn")
+
+
+func _on_esc2_pressed():
+	get_tree().change_scene("res://Terreno2.tscn")

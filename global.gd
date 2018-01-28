@@ -6,6 +6,7 @@ enum { ESTADO_NEUTRAL, ESTADO_PLAYER1, ESTADO_PLAYER2 }
 enum { PLAYER_1, PLAYER_2 }
 var VIDA1 = 5
 var VIDA2 = 5
+var TIEMPO=30
 
 var vacio = load("res://heart_void.png")
 var hot = load("res://heart_hot.png")

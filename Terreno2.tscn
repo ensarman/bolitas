@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=1]
+[gd_scene load_steps=60 format=1]
 
 [ext_resource path="res://Terreno2.gd" type="Script" id=1]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Pincho_top.png" type="Texture" id=9]
 [ext_resource path="res://Pincho_bot.png" type="Texture" id=10]
 [ext_resource path="res://Enemigo.png" type="Texture" id=11]
+[ext_resource path="res://temporizador.tscn" type="PackedScene" id=12]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -481,15 +482,15 @@ _update_shape_index = 0
 
 [node name="Puntaje" type="Label" parent="."]
 
-rect/scale = Vector2( 5, 5 )
+rect/scale = Vector2( 2, 2 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 566.0
-margin/top = 11.0
-margin/right = 606.0
-margin/bottom = 25.0
+margin/left = 596.0
+margin/top = 52.0
+margin/right = 621.0
+margin/bottom = 66.0
 text = "0|0"
 percent_visible = 1.0
 lines_skipped = 0
@@ -1198,5 +1199,7 @@ bounce = 0.0
 shape = SubResource( 47 )
 trigger = false
 _update_shape_index = 0
+
+[node name="temporizador" parent="." instance=ExtResource( 12 )]
 
 

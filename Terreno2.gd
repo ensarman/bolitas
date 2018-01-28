@@ -1,6 +1,11 @@
 extends Node
 
 func _ready():
+	global.TIEMPO = 15
+	global.score1=0
+	global.score2=0
+	global.VIDA1=5
+	global.VIDA2=5
 	set_process(true)
 
 func _process(delta):

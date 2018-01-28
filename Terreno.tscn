@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=1]
+[gd_scene load_steps=17 format=1]
 
 [ext_resource path="res://Terreno.gd" type="Script" id=1]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Pincho_top.png" type="Texture" id=8]
 [ext_resource path="res://Pincho_bot.png" type="Texture" id=9]
 [ext_resource path="res://Enemigo.png" type="Texture" id=10]
+[ext_resource path="res://temporizador.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -76,15 +77,15 @@ _update_shape_index = 0
 
 [node name="Puntaje" type="Label" parent="."]
 
-rect/scale = Vector2( 5, 5 )
+rect/scale = Vector2( 2, 2 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 583.0
-margin/top = 16.0
-margin/right = 626.0
-margin/bottom = 36.0
+margin/left = 596.0
+margin/top = 52.0
+margin/right = 627.0
+margin/bottom = 66.0
 text = "0 | 0"
 align = 1
 percent_visible = 1.0
@@ -885,5 +886,7 @@ build_mode = 1
 polygon = Vector2Array( -22.2178, -26.8618, -18.7213, -26.687, -15.7493, -23.5402, -12.078, -22.666, -0.889267, -31.2324, -0.585968, -33.1523, 1.85576, -32.8953, 2.11278, -31.0961, 8.9239, -25.1846, 12.2652, -23.1284, 15.992, -23.2569, 19.7189, -26.7267, 23.3172, -27.2408, 24.0883, -24.4135, 20.1044, -20.3011, 20.1044, -16.1888, 21.3895, -13.7471, 20.8755, -11.4339, 27.6866, -6.03638, 31.4134, -5.39383, 31.2849, -2.56656, 27.9436, -2.95209, 21.8495, 4.10239, 19.2048, 8.35693, 19.4429, 12.2939, 21.4146, 14.0336, 23.5202, 16.054, 23.7772, 19.2668, 19.5363, 19.6523, 17.2392, 16.1213, 12.8319, 15.3094, 10.9762, 17.3971, 9.12053, 16.7012, 4.82921, 21.9203, 1.81367, 22.3843, 1.92966, 26.4436, 1.0018, 27.3715, -0.389969, 27.0236, -0.621933, 23.5441, -7.46486, 17.1651, -9.55255, 17.3971, -13.38, 12.5258, -19.527, 13.3377, -23.3544, 16.9332, -26.1379, 16.8172, -26.6019, 13.6857, -22.6585, 10.7861, -22.4265, 2.31946, -26.9498, -3.01572, -29.9653, -3.01572, -30.4293, -4.4075, -26.7178, -4.9874, -20.1069, -11.5984, -20.1069, -13.5701, -18.2512, -15.5417, -18.2512, -19.9491, -22.6585, -23.3125 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+
+[node name="temporizador" parent="." instance=ExtResource( 11 )]
 
 
