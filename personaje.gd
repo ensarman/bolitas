@@ -28,9 +28,28 @@ func _ready():
 func collision_now(who):
 #	if (who.get_name() == "BolaNodo"):
 	if (who.get_name().substr(0,8) == "BolaNodo"):
-			who.cambiar_estado(PLAYER_ORIGEN)
+		who.cambiar_estado(PLAYER_ORIGEN)
 	if (who.get_name().substr(0,7) == "Enemigo"):
-			who.AjustaVida_2(PLAYER_ORIGEN)
+		self.AjustaVida_2(PLAYER_ORIGEN)
+	if who.get_name().substr(0,6) == "Player":
+		# cuando dos jugadores chocan le restamos la vida a ambos
+		# solo hay una llamada xq este método se llama por cada jugador
+		self.AjustaVida_2(PLAYER_ORIGEN)
+
+func AjustaVida_2(Personaje_Origen):
+	# FIXME: el problema es en la clase personaje.gd, 
+	# el valor inicial de PLAYER_ORIGEN
+	Personaje_Origen -= 1 
+	if Personaje_Origen == global.PLAYER_1:
+		print("player1")
+		global.VIDA2 -=1
+		if global.VIDA2 == 0:
+			get_tree().change_scene("res://resultados.tscn")
+	else:
+		print("player2")
+		global.VIDA1 -=1
+		if global.VIDA1 == 0:
+			get_tree().change_scene("res://resultados.tscn")
 
 func _integrate_forces(state):
 	#fuerza final
