@@ -1,7 +1,7 @@
 extends Node
 
 func _ready():
-	global.TIEMPO = 15
+	global.TIEMPO = 40
 	global.score1=0
 	global.score2=0
 	global.VIDA1=5
