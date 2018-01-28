@@ -1,14 +1,7 @@
 extends "res://personaje.gd"
 
 func _ready():
-#	acceleration = 1000
-#	top_move_speed = 200
-#	top_jump_speed = 300
-	set_contact_monitor( true )
-	set_max_contacts_reported( 5 )
-	connect("body_enter",self,"collision_now")
-	life=5
-	pass
+	PLAYER_ORIGEN = global.ESTADO_PLAYER1
 
 onready var sprite = get_node("Sprite")
 
@@ -25,9 +18,6 @@ func animate():
 		if (sprite.is_flipped_h ()):
 			sprite.set_flip_h (false)
 
-func collision_now(who):
-	print(self.get_name()," is colliding with ",who.get_name())
-	
 func apply_force(state):
-	check_movement(PLAYER_1)
+	check_movement(global.PLAYER_1)
 	animate()

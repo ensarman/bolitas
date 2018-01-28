@@ -7,6 +7,8 @@ var life=5
 
 var directional_force = Vector2()
 
+var PLAYER_ORIGEN
+
 const DIRECTION = {
 	ZERO=Vector2(0,0),
 	LEFT=Vector2(-1,0),
@@ -15,8 +17,17 @@ const DIRECTION = {
 	DOWN=Vector2(0,1)
 }
 
-# enum para identificar a ambos jugadores
-enum { PLAYER_1, PLAYER_2 }
+func _ready():
+	# para activar detección de colisiones
+	set_contact_monitor( true )
+	set_max_contacts_reported( 5 )
+	connect("body_enter",self,"collision_now")
+	life=5
+
+# detección de colisiones
+func collision_now(who):
+	if (who.get_name() == "BolaNodo"):
+		who.cambiar_estado(PLAYER_ORIGEN)
 
 func _integrate_forces(state):
 	#fuerza final
@@ -47,14 +58,14 @@ func check_movement(player):
 	"""
 	Mueve al jugador dependiendo si player es PLAYER_1 o PLAYER_2
 	"""
-	if player==PLAYER_1:
+	if player==global.PLAYER_1:
 		if (Input.is_action_pressed("move_left")):
 			directional_force += DIRECTION.LEFT
 		if (Input.is_action_pressed("move_right")):
 			directional_force += DIRECTION.RIGHT
 		if (Input.is_action_pressed("move_jump")):
 			directional_force += DIRECTION.UP
-	elif player==PLAYER_2:
+	elif player==global.PLAYER_2:
 		if (Input.is_action_pressed("ui_left")):
 			directional_force += DIRECTION.LEFT
 		if (Input.is_action_pressed("ui_right")):
@@ -62,6 +73,7 @@ func check_movement(player):
 		if (Input.is_action_pressed("ui_jump")):
 			directional_force += DIRECTION.UP
 		
+
 func bajarVida():
 	life-=1
 

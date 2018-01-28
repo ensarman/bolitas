@@ -1,11 +1,7 @@
 extends "res://personaje.gd"
 
 func _ready():
-#	acceleration = 1000
-#	top_move_speed = 200
-#	top_jump_speed = 300
-	life=5
-	pass
+	PLAYER_ORIGEN = global.ESTADO_PLAYER2
 
 onready var sprite = get_node("Sprite")
 
@@ -23,5 +19,5 @@ func animate():
 			sprite.set_flip_h (false)
 			
 func apply_force(state):
-	check_movement(PLAYER_2)
+	check_movement(global.PLAYER_2)
 	animate()

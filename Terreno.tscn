@@ -1,16 +1,21 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://Terreno.gd" type="Script" id=1]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player2.tscn" type="PackedScene" id=4]
-[ext_resource path="res://BolaNodo.tscn" type="PackedScene" id=5]
-[ext_resource path="res://BolaNodo.gd" type="Script" id=6]
+[ext_resource path="res://bola.gd" type="Script" id=5]
+[ext_resource path="res://Monedas.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 662.309, 10 )
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
 
 [node name="Esena" type="Node"]
 
@@ -27,7 +32,7 @@ transform/pos = Vector2( 116.722, 66.2 )
 
 [node name="Player2" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 1223.58, 75.6852 )
+transform/pos = Vector2( 370.135, 93.3079 )
 
 [node name="techo" type="StaticBody2D" parent="."]
 
@@ -49,11 +54,6 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[node name="BolaNodo" parent="." instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 284.01, 90.8831 )
-script/script = ExtResource( 6 )
-
 [node name="Puntaje" type="Label" parent="."]
 
 rect/scale = Vector2( 5, 5 )
@@ -71,5 +71,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="BolaNodo" type="KinematicBody2D" parent="."]
 
-[editable path="BolaNodo"]
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 299.218, 92.7027 )
+shapes/0/trigger = true
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 5 )
+
+[node name="BolaSprite" type="Sprite" parent="BolaNodo"]
+
+transform/pos = Vector2( 300.277, 89.7508 )
+texture = ExtResource( 6 )
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BolaNodo"]
+
+transform/pos = Vector2( 299.218, 92.7027 )
+shape = SubResource( 2 )
+trigger = true
+_update_shape_index = 0
+
+
