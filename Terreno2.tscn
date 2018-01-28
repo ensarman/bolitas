@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://Terreno2.gd" type="Script" id=1]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player2.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://heart_void.png" type="Texture" id=5]
+[ext_resource path="res://bola.gd" type="Script" id=6]
+[ext_resource path="res://Monedas.png" type="Texture" id=7]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 10.0
 
 [node name="Esena" type="Node"]
 
@@ -12,7 +19,7 @@ script/script = ExtResource( 1 )
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 
-tile_data = IntArray( 0, 2, 19, 2, 27, 2, 65536, 2, 65555, 2, 65563, 2, 131072, 2, 131073, 1, 131074, 1, 131091, 2, 131097, 1, 131098, 1, 131099, 2, 196608, 2, 196627, 2, 196635, 2, 262144, 2, 262163, 2, 262171, 2, 327680, 2, 327699, 2, 327707, 2, 393216, 2, 393222, 0, 393223, 0, 393224, 0, 393225, 0, 393229, 0, 393230, 0, 393231, 0, 393235, 2, 393243, 2, 458752, 2, 458758, 0, 458771, 2, 458779, 2, 524288, 2, 524303, 0, 524304, 0, 524305, 0, 524306, 0, 524307, 2, 524315, 2, 589824, 2, 589843, 2, 589851, 2, 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655364, 0, 655365, 0, 655366, 0, 655367, 0, 655368, 0, 655369, 0, 655370, 0, 655371, 0, 655372, 0, 655373, 0, 655374, 0, 655375, 0, 655376, 0, 655377, 0, 655378, 0, 655379, 0, 655380, 0, 655381, 0, 655382, 0, 655383, 0, 655384, 0, 655385, 0, 655386, 0, 655387, 0 )
+tile_data = IntArray( 0, 2, 19, 2, 65536, 2, 65555, 2, 131072, 2, 131073, 1, 131074, 1, 131091, 2, 196608, 2, 196627, 2, 262144, 2, 262163, 2, 327680, 2, 327699, 2, 393216, 2, 393222, 0, 393223, 0, 393224, 0, 393225, 0, 393229, 0, 393230, 0, 393231, 0, 393235, 2, 458752, 2, 458758, 0, 458771, 2, 524288, 2, 524303, 0, 524304, 0, 524305, 0, 524306, 0, 524307, 2, 589824, 2, 589843, 2, 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655364, 0, 655365, 0, 655366, 0, 655367, 0, 655368, 0, 655369, 0, 655370, 0, 655371, 0, 655372, 0, 655373, 0, 655374, 0, 655375, 0, 655376, 0, 655377, 0, 655378, 0, 655379, 0 )
 
 [node name="Player2" parent="." instance=ExtResource( 3 )]
 
@@ -81,5 +88,151 @@ texture = ExtResource( 5 )
 transform/pos = Vector2( 1120, 20 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 5 )
+
+[node name="BolaNodo0" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 123.692, 259.556 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 304.142, 105.592 )
+shapes/0/trigger = true
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 6 )
+
+[node name="BolaSprite" type="Sprite" parent="BolaNodo0"]
+
+transform/pos = Vector2( 305, 101.609 )
+texture = ExtResource( 7 )
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BolaNodo0"]
+
+transform/pos = Vector2( 304.142, 105.592 )
+shape = SubResource( 1 )
+trigger = true
+_update_shape_index = 0
+
+[node name="BolaNodo1" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 660.212, 259.556 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 304.142, 105.592 )
+shapes/0/trigger = true
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 6 )
+
+[node name="BolaSprite" type="Sprite" parent="BolaNodo1"]
+
+transform/pos = Vector2( 305, 101.609 )
+texture = ExtResource( 7 )
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BolaNodo1"]
+
+transform/pos = Vector2( 304.142, 105.592 )
+shape = SubResource( 1 )
+trigger = true
+_update_shape_index = 0
+
+[node name="BolaNodo2" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -177.103, 513.697 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 304.142, 105.592 )
+shapes/0/trigger = true
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 6 )
+
+[node name="BolaSprite" type="Sprite" parent="BolaNodo2"]
+
+transform/pos = Vector2( 305, 101.609 )
+texture = ExtResource( 7 )
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BolaNodo2"]
+
+transform/pos = Vector2( 304.142, 105.592 )
+shape = SubResource( 1 )
+trigger = true
+_update_shape_index = 0
+
+[node name="BolaNodo3" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 10.7401, 27.5139 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 304.142, 105.592 )
+shapes/0/trigger = true
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 6 )
+
+[node name="BolaSprite" type="Sprite" parent="BolaNodo3"]
+
+transform/pos = Vector2( 305, 101.609 )
+texture = ExtResource( 7 )
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BolaNodo3"]
+
+transform/pos = Vector2( 304.142, 105.592 )
+shape = SubResource( 1 )
+trigger = true
+_update_shape_index = 0
+
+[node name="BolaNodo4" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 359.417, 54.5241 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 304.142, 105.592 )
+shapes/0/trigger = true
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 6 )
+
+[node name="BolaSprite" type="Sprite" parent="BolaNodo4"]
+
+transform/pos = Vector2( 305, 101.609 )
+texture = ExtResource( 7 )
+hframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BolaNodo4"]
+
+transform/pos = Vector2( 304.142, 105.592 )
+shape = SubResource( 1 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Puntaje" type="Label" parent="."]
+
+rect/scale = Vector2( 5, 5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 566.0
+margin/top = 11.0
+margin/right = 606.0
+margin/bottom = 25.0
+text = "0|0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 

@@ -25,7 +25,7 @@ script/script = ExtResource( 1 )
 [node name="TileMap 2" parent="." instance=ExtResource( 2 )]
 
 transform/pos = Vector2( 0, -3 )
-tile_data = IntArray( 0, 2, 20, 2, 27, 2, 65536, 2, 65556, 2, 65563, 2, 131072, 2, 131073, 1, 131074, 1, 131076, 0, 131077, 0, 131088, 0, 131090, 1, 131091, 1, 131092, 2, 131097, 1, 131098, 1, 131099, 2, 196608, 2, 196615, 0, 196616, 0, 196621, 0, 196622, 0, 196628, 2, 196635, 2, 262144, 2, 262154, 0, 262155, 0, 262164, 2, 262171, 2, 327680, 2, 327686, 9, 327700, 2, 327707, 2, 393216, 2, 393221, 9, 393222, 8, 393223, 9, 393225, 0, 393228, 0, 393236, 2, 393243, 2, 458752, 2, 458757, 7, 458758, 0, 458759, 0, 458766, 0, 458767, 0, 458772, 2, 458779, 2, 524288, 2, 524291, 1, 524292, 1, 524293, 7, 524294, 7, 524295, 7, 524301, 9, 524305, 0, 524306, 0, 524308, 2, 524315, 2, 589824, 2, 589829, 7, 589830, 7, 589831, 7, 589836, 9, 589837, 8, 589838, 9, 589844, 2, 589851, 2, 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655364, 0, 655365, 0, 655366, 0, 655367, 0, 655368, 0, 655369, 0, 655370, 0, 655371, 0, 655372, 0, 655373, 0, 655374, 0, 655375, 0, 655376, 0, 655377, 0, 655378, 0, 655379, 0, 655380, 0, 655381, 0, 655382, 0, 655383, 0, 655384, 0, 655385, 0, 655386, 0, 655387, 0 )
+tile_data = IntArray( 0, 2, 20, 2, 65536, 2, 65556, 2, 131072, 2, 131073, 1, 131074, 1, 131076, 0, 131077, 0, 131088, 0, 131090, 1, 131091, 1, 131092, 2, 196608, 2, 196615, 0, 196616, 0, 196621, 0, 196622, 0, 196628, 2, 262144, 2, 262154, 0, 262155, 0, 262164, 2, 327680, 2, 327686, 9, 327700, 2, 393216, 2, 393221, 9, 393222, 8, 393223, 9, 393225, 0, 393228, 0, 393236, 2, 458752, 2, 458757, 7, 458758, 0, 458759, 0, 458766, 0, 458767, 0, 458772, 2, 524288, 2, 524291, 1, 524292, 1, 524293, 7, 524294, 7, 524295, 7, 524301, 9, 524305, 0, 524306, 0, 524308, 2, 589824, 2, 589829, 7, 589830, 7, 589831, 7, 589836, 9, 589837, 8, 589838, 9, 589844, 2, 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655364, 0, 655365, 0, 655366, 0, 655367, 0, 655368, 0, 655369, 0, 655370, 0, 655371, 0, 655372, 0, 655373, 0, 655374, 0, 655375, 0, 655376, 0, 655377, 0, 655378, 0, 655379, 0, 655380, 0 )
 
 [node name="Player1" parent="." instance=ExtResource( 3 )]
 
@@ -67,23 +67,6 @@ margin/left = 583.0
 margin/top = 16.0
 margin/right = 626.0
 margin/bottom = 36.0
-text = "0 | 0"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Vida" type="Label" parent="."]
-
-rect/scale = Vector2( 5, 5 )
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 946.0
-margin/top = 2.0
-margin/right = 989.0
-margin/bottom = 22.0
 text = "0 | 0"
 align = 1
 percent_visible = 1.0
@@ -377,61 +360,61 @@ _update_shape_index = 0
 
 [node name="hot1" type="Sprite" parent="."]
 
-transform/pos = Vector2( 77.7472, 17.7598 )
+transform/pos = Vector2( 77.1374, 16.7327 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="hot2" type="Sprite" parent="."]
 
-transform/pos = Vector2( 106.315, 19.1202 )
+transform/pos = Vector2( 105.234, 17.8261 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="hot3" type="Sprite" parent="."]
 
-transform/pos = Vector2( 134.112, 19.1202 )
+transform/pos = Vector2( 133.038, 17.8128 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="hot4" type="Sprite" parent="."]
 
-transform/pos = Vector2( 160.934, 19.1202 )
+transform/pos = Vector2( 160.419, 17.8421 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="hot5" type="Sprite" parent="."]
 
-transform/pos = Vector2( 188.244, 19.1202 )
+transform/pos = Vector2( 187.894, 17.7178 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="ice1" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1265.37, 15.3941 )
+transform/pos = Vector2( 1234.56, 18.2879 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="ice2" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1238.07, 14.9064 )
+transform/pos = Vector2( 1262.13, 17.3242 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="ice3" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1210.27, 14.9064 )
+transform/pos = Vector2( 1206.24, 17.2074 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="ice4" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1182.96, 15.3941 )
+transform/pos = Vector2( 1177.54, 19.1322 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="ice5" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1155.65, 14.9064 )
+transform/pos = Vector2( 1149.33, 19.6758 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 

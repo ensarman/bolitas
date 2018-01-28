@@ -1,9 +1,5 @@
 extends Node
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
-
 func _ready():
 	set_process(true)
 	pass
@@ -11,7 +7,6 @@ func _ready():
 func _process(delta):
 	# FIXME: extremadamente ineficiente
 	cambiar_puntaje(global.score1,global.score2)
-	cambiar_vida(global.VIDA1, global.VIDA2)
 	actu_vida(global.VIDA1, global.VIDA2)
 
 func cambiar_puntaje(score1, score2):
@@ -35,7 +30,3 @@ func limpiar_vida():
 		get_node("hot"+str(x)).set_texture(global.vacio)
 		get_node("ice"+str(x)).set_texture(global.vacio)
 		x=x+1
-
-func cambiar_vida(score1, score2):
-	var formato_lbl_puntaje = "%s | %s"
-	get_node("Vida").set_text(formato_lbl_puntaje % [score1 , score2])
