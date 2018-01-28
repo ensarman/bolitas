@@ -26,8 +26,9 @@ func _ready():
 
 # detección de colisiones
 func collision_now(who):
-	if (who.get_name() == "BolaNodo"):
-		who.cambiar_estado(PLAYER_ORIGEN)
+#	if (who.get_name() == "BolaNodo"):
+	if (who.get_name().substr(0,8) == "BolaNodo"):
+			who.cambiar_estado(PLAYER_ORIGEN)
 
 func _integrate_forces(state):
 	#fuerza final
@@ -73,7 +74,3 @@ func check_movement(player):
 		if (Input.is_action_pressed("ui_jump")):
 			directional_force += DIRECTION.UP
 		
-
-func bajarVida():
-	life-=1
-

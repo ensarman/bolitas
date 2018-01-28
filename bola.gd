@@ -21,21 +21,25 @@ func cambiar_estado(nuevo_estado):
 	# no hay cambio!	
 	if estado == nuevo_estado:
 		return
-	print('hcua')	
+
 	# cuando cambia de neutral
 	if estado == global.ESTADO_NEUTRAL:
 		if nuevo_estado == global.ESTADO_PLAYER1:
 			global.score1 += 1
+			AjustaVida(global.PLAYER_1)
 		elif nuevo_estado == global.ESTADO_PLAYER2:
 			global.score2 += 1
+			AjustaVida(global.PLAYER_2)
 	elif estado == global.ESTADO_PLAYER1:
 		if nuevo_estado == global.ESTADO_PLAYER2:
 			global.score1 -= 1
 			global.score2 += 1
+			AjustaVida(global.PLAYER_2)
 	elif estado == global.ESTADO_PLAYER2:
 		if nuevo_estado == global.ESTADO_PLAYER1:
 			global.score1 += 1
 			global.score2 -= 1
+			AjustaVida(global.PLAYER_1)
 	
 	# actualizamos el estado
 	estado = nuevo_estado
@@ -43,6 +47,20 @@ func cambiar_estado(nuevo_estado):
 	get_node("BolaSprite").update()
 	#global.score1+=2
 	#global.score2+=5
+
+func AjustaVida(Personaje_Origen):
+	if Personaje_Origen == global.PLAYER_1:
+		if global.VIDA1 < 5:
+			global.VIDA1 +=1
+		global.VIDA2 -=1
+		if global.VIDA2 == 1:
+			get_tree().change_scene("res://resultados.tscn")
+	else:
+		global.VIDA1 -=1
+		if global.VIDA2 == 1:
+			get_tree().change_scene("res://resultados.tscn")
+		if global.VIDA2 < 5:
+			global.VIDA2 +=1
 
 func check_colision():
 	#get_node("CollisionShape2D").
