@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=17 format=1]
 
 [ext_resource path="res://Terreno.gd" type="Script" id=1]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://Monedas.png" type="Texture" id=6]
 [ext_resource path="res://heart_void.png" type="Texture" id=7]
 [ext_resource path="res://Enemigo.gd" type="Script" id=8]
+[ext_resource path="res://Pincho_top.png" type="Texture" id=9]
+[ext_resource path="res://Pincho_bot.png" type="Texture" id=10]
+[ext_resource path="res://Enemigo.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -22,7 +25,17 @@ radius = 10.0
 [sub_resource type="ConcavePolygonShape2D" id=3]
 
 custom_solver_bias = 0.0
-segments = Vector2Array( -11.6984, -10.7599, -14.3391, 13.0068, -14.3391, 13.0068, -7.29714, 14.7673, -7.29714, 14.7673, -0.202232, -4.75308, -0.202232, -4.75308, 11.1881, 11.2463, 11.1881, 11.2463, 15.1492, -2.83768, 15.1492, -2.83768, 14.7091, -12.5204, 14.7091, -12.5204, -11.6984, -10.7599 )
+segments = Vector2Array( -30.7386, -15.9504, 29.6377, -15.5532, 29.6377, -15.5532, 28.8433, 5.4991, 28.8433, 5.4991, 15.7353, -8.00612, 15.7353, -8.00612, 8.18825, 6.29353, 8.18825, 6.29353, -5.31698, -9.99219, -5.31698, -9.99219, -19.2194, 6.29353, -19.2194, 6.29353, -29.9442, -7.6089, -29.9442, -7.6089, -30.7386, -15.9504 )
+
+[sub_resource type="ConcavePolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+segments = Vector2Array( 31.4122, 29.1495, 31.4122, 12.5017, 31.4122, 12.5017, 22.6127, 20.1121, 22.6127, 20.1121, 15.7158, 8.45868, 15.7158, 8.45868, 6.9162, 21.3013, 6.9162, 21.3013, -1.16986, 7.50732, -1.16986, 7.50732, -9.01813, 21.0634, -9.01813, 21.0634, -14.726, 15.8312, -14.726, 15.8312, -16.3907, 9.17212, -16.3907, 9.17212, -28.7577, 22.9661, -28.7577, 22.9661, -29.4712, 28.436, -29.4712, 28.436, 31.4122, 29.1495 )
+
+[sub_resource type="ConcavePolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+segments = Vector2Array( -22.2178, -26.8618, -18.7213, -26.687, -18.7213, -26.687, -15.7493, -23.5402, -15.7493, -23.5402, -12.078, -22.666, -12.078, -22.666, -0.889267, -31.2324, -0.889267, -31.2324, -0.585968, -33.1523, -0.585968, -33.1523, 1.85576, -32.8953, 1.85576, -32.8953, 2.11278, -31.0961, 2.11278, -31.0961, 8.9239, -25.1846, 8.9239, -25.1846, 12.2652, -23.1284, 12.2652, -23.1284, 15.992, -23.2569, 15.992, -23.2569, 19.7189, -26.7267, 19.7189, -26.7267, 23.3172, -27.2408, 23.3172, -27.2408, 24.0883, -24.4135, 24.0883, -24.4135, 20.1044, -20.3011, 20.1044, -20.3011, 20.1044, -16.1888, 20.1044, -16.1888, 21.3895, -13.7471, 21.3895, -13.7471, 20.8755, -11.4339, 20.8755, -11.4339, 27.6866, -6.03638, 27.6866, -6.03638, 31.4134, -5.39383, 31.4134, -5.39383, 31.2849, -2.56656, 31.2849, -2.56656, 27.9436, -2.95209, 27.9436, -2.95209, 21.8495, 4.10239, 21.8495, 4.10239, 19.2048, 8.35693, 19.2048, 8.35693, 19.4429, 12.2939, 19.4429, 12.2939, 21.4146, 14.0336, 21.4146, 14.0336, 23.5202, 16.054, 23.5202, 16.054, 23.7772, 19.2668, 23.7772, 19.2668, 19.5363, 19.6523, 19.5363, 19.6523, 17.2392, 16.1213, 17.2392, 16.1213, 12.8319, 15.3094, 12.8319, 15.3094, 10.9762, 17.3971, 10.9762, 17.3971, 9.12053, 16.7012, 9.12053, 16.7012, 4.82921, 21.9203, 4.82921, 21.9203, 1.81367, 22.3843, 1.81367, 22.3843, 1.92966, 26.4436, 1.92966, 26.4436, 1.0018, 27.3715, 1.0018, 27.3715, -0.389969, 27.0236, -0.389969, 27.0236, -0.621933, 23.5441, -0.621933, 23.5441, -7.46486, 17.1651, -7.46486, 17.1651, -9.55255, 17.3971, -9.55255, 17.3971, -13.38, 12.5258, -13.38, 12.5258, -19.527, 13.3377, -19.527, 13.3377, -23.3544, 16.9332, -23.3544, 16.9332, -26.1379, 16.8172, -26.1379, 16.8172, -26.6019, 13.6857, -26.6019, 13.6857, -22.6585, 10.7861, -22.6585, 10.7861, -22.4265, 2.31946, -22.4265, 2.31946, -26.9498, -3.01572, -26.9498, -3.01572, -29.9653, -3.01572, -29.9653, -3.01572, -30.4293, -4.4075, -30.4293, -4.4075, -26.7178, -4.9874, -26.7178, -4.9874, -20.1069, -11.5984, -20.1069, -11.5984, -20.1069, -13.5701, -20.1069, -13.5701, -18.2512, -15.5417, -18.2512, -15.5417, -18.2512, -19.9491, -18.2512, -19.9491, -22.6585, -23.3125, -22.6585, -23.3125, -22.2178, -26.8618 )
 
 [node name="Esena" type="Node"]
 
@@ -35,11 +48,11 @@ tile_data = IntArray( 0, 2, 20, 2, 65536, 2, 65556, 2, 131072, 2, 131073, 1, 131
 
 [node name="Player1" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 116.722, 66.2 )
+transform/pos = Vector2( 92.3454, 68.416 )
 
 [node name="Player2" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 370.135, 93.3079 )
+transform/pos = Vector2( 1254.94, 78.2346 )
 
 [node name="techo" type="StaticBody2D" parent="."]
 
@@ -366,70 +379,71 @@ _update_shape_index = 0
 
 [node name="hot1" type="Sprite" parent="."]
 
-transform/pos = Vector2( 77.1374, 16.7327 )
+transform/pos = Vector2( 1261.84, 17.513 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="hot2" type="Sprite" parent="."]
 
-transform/pos = Vector2( 105.234, 17.8261 )
+transform/pos = Vector2( 1234.01, 17.0403 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="hot3" type="Sprite" parent="."]
 
-transform/pos = Vector2( 133.038, 17.8128 )
+transform/pos = Vector2( 1206.59, 17.7432 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="hot4" type="Sprite" parent="."]
 
-transform/pos = Vector2( 160.419, 17.8421 )
+transform/pos = Vector2( 1178.76, 18.4895 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="hot5" type="Sprite" parent="."]
 
-transform/pos = Vector2( 187.894, 17.7178 )
+transform/pos = Vector2( 1151.39, 18.3652 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="ice1" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1263.34, 18.3484 )
+transform/pos = Vector2( 77.5617, 17.4783 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="ice2" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1235.09, 19.2415 )
+transform/pos = Vector2( 109.171, 18.3713 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="ice3" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1207.44, 19.6023 )
+transform/pos = Vector2( 140.015, 18.7322 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="ice4" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1177.54, 19.1322 )
+transform/pos = Vector2( 169.974, 19.6224 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="ice5" type="Sprite" parent="."]
 
-transform/pos = Vector2( 1149.33, 19.6758 )
+transform/pos = Vector2( 201.62, 18.8056 )
 transform/scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 7 )
 
 [node name="Enemigo1" type="KinematicBody2D" parent="."]
 
-transform/pos = Vector2( 147.457, 203.169 )
+editor/display_folded = true
+transform/pos = Vector2( 93.2208, 205.71 )
 input/pickable = false
 shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -438,10 +452,456 @@ script/script = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="Enemigo1"]
 
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo1"]
 
+transform/pos = Vector2( 0.358475, 0.71698 )
 build_mode = 1
-polygon = Vector2Array( -11.6984, -10.7599, -14.3391, 13.0068, -7.29714, 14.7673, -0.202232, -4.75308, 11.1881, 11.2463, 15.1492, -2.83768, 14.7091, -12.5204 )
+polygon = Vector2Array( -30.7386, -15.9504, 29.6377, -15.5532, 28.8433, 5.4991, 15.7353, -8.00612, 8.18825, 6.29353, -5.31698, -9.99219, -19.2194, 6.29353, -29.9442, -7.6089 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo2" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 156.688, 207.38 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo2"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo2"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( -30.7386, -15.9504, 29.6377, -15.5532, 28.8433, 5.4991, 15.7353, -8.00612, 8.18825, 6.29353, -5.31698, -9.99219, -19.2194, 6.29353, -29.9442, -7.6089 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo3" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 481.593, 525.501 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo3"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo3"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( -30.7386, -15.9504, 29.6377, -15.5532, 28.8433, 5.4991, 15.7353, -8.00612, 8.18825, 6.29353, -5.31698, -9.99219, -19.2194, 6.29353, -29.9442, -7.6089 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo4" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 927.187, 525.794 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo4"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo4"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( -30.7386, -15.9504, 29.6377, -15.5532, 28.8433, 5.4991, 15.7353, -8.00612, 8.18825, 6.29353, -5.31698, -9.99219, -19.2194, 6.29353, -29.9442, -7.6089 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo5" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 799.147, 460.779 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo5"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo5"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( -30.7386, -15.9504, 29.6377, -15.5532, 28.8433, 5.4991, 15.7353, -8.00612, 8.18825, 6.29353, -5.31698, -9.99219, -19.2194, 6.29353, -29.9442, -7.6089 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo6" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 608.747, 460.779 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo6"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo6"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( -30.7386, -15.9504, 29.6377, -15.5532, 28.8433, 5.4991, 15.7353, -8.00612, 8.18825, 6.29353, -5.31698, -9.99219, -19.2194, 6.29353, -29.9442, -7.6089 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo7" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 861.66, 269.252 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo7"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo7"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( -30.7386, -15.9504, 29.6377, -15.5532, 28.8433, 5.4991, 15.7353, -8.00612, 8.18825, 6.29353, -5.31698, -9.99219, -19.2194, 6.29353, -29.9442, -7.6089 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo8" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 926.729, 270.48 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo8"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo8"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( -30.7386, -15.9504, 29.6377, -15.5532, 28.8433, 5.4991, 15.7353, -8.00612, 8.18825, 6.29353, -5.31698, -9.99219, -19.2194, 6.29353, -29.9442, -7.6089 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo9" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 478.922, 270.48 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo9"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo9"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( -30.7386, -15.9504, 29.6377, -15.5532, 28.8433, 5.4991, 15.7353, -8.00612, 8.18825, 6.29353, -5.31698, -9.99219, -19.2194, 6.29353, -29.9442, -7.6089 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo10" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 542.611, 270.48 )
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo10"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo10"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( -30.7386, -15.9504, 29.6377, -15.5532, 28.8433, 5.4991, 15.7353, -8.00612, 8.18825, 6.29353, -5.31698, -9.99219, -19.2194, 6.29353, -29.9442, -7.6089 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo11" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 726.18, 612.923 )
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo11"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo11"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( 31.4122, 29.1495, 31.4122, 12.5017, 22.6127, 20.1121, 15.7158, 8.45868, 6.9162, 21.3013, -1.16986, 7.50732, -9.01813, 21.0634, -14.726, 15.8312, -16.3907, 9.17212, -28.7577, 22.9661, -29.4712, 28.436 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo12" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 663.812, 614.386 )
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo12"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo12"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( 31.4122, 29.1495, 31.4122, 12.5017, 22.6127, 20.1121, 15.7158, 8.45868, 6.9162, 21.3013, -1.16986, 7.50732, -9.01813, 21.0634, -14.726, 15.8312, -16.3907, 9.17212, -28.7577, 22.9661, -29.4712, 28.436 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo13" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 1182.81, 99.975 )
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo13"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo13"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( 31.4122, 29.1495, 31.4122, 12.5017, 22.6127, 20.1121, 15.7158, 8.45868, 6.9162, 21.3013, -1.16986, 7.50732, -9.01813, 21.0634, -14.726, 15.8312, -16.3907, 9.17212, -28.7577, 22.9661, -29.4712, 28.436 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo14" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 158.284, 99.4075 )
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo14"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo14"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( 31.4122, 29.1495, 31.4122, 12.5017, 22.6127, 20.1121, 15.7158, 8.45868, 6.9162, 21.3013, -1.16986, 7.50732, -9.01813, 21.0634, -14.726, 15.8312, -16.3907, 9.17212, -28.7577, 22.9661, -29.4712, 28.436 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo15" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 90.6885, 613.685 )
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo15"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo15"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( 31.4122, 29.1495, 31.4122, 12.5017, 22.6127, 20.1121, 15.7158, 8.45868, 6.9162, 21.3013, -1.16986, 7.50732, -9.01813, 21.0634, -14.726, 15.8312, -16.3907, 9.17212, -28.7577, 22.9661, -29.4712, 28.436 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo16" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 1247.32, 610.986 )
+input/pickable = false
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo16"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo16"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( 31.4122, 29.1495, 31.4122, 12.5017, 22.6127, 20.1121, 15.7158, 8.45868, 6.9162, 21.3013, -1.16986, 7.50732, -9.01813, 21.0634, -14.726, 15.8312, -16.3907, 9.17212, -28.7577, 22.9661, -29.4712, 28.436 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo17" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 186.261, 333.794 )
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo17"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 11 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo17"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( -22.2178, -26.8618, -18.7213, -26.687, -15.7493, -23.5402, -12.078, -22.666, -0.889267, -31.2324, -0.585968, -33.1523, 1.85576, -32.8953, 2.11278, -31.0961, 8.9239, -25.1846, 12.2652, -23.1284, 15.992, -23.2569, 19.7189, -26.7267, 23.3172, -27.2408, 24.0883, -24.4135, 20.1044, -20.3011, 20.1044, -16.1888, 21.3895, -13.7471, 20.8755, -11.4339, 27.6866, -6.03638, 31.4134, -5.39383, 31.2849, -2.56656, 27.9436, -2.95209, 21.8495, 4.10239, 19.2048, 8.35693, 19.4429, 12.2939, 21.4146, 14.0336, 23.5202, 16.054, 23.7772, 19.2668, 19.5363, 19.6523, 17.2392, 16.1213, 12.8319, 15.3094, 10.9762, 17.3971, 9.12053, 16.7012, 4.82921, 21.9203, 1.81367, 22.3843, 1.92966, 26.4436, 1.0018, 27.3715, -0.389969, 27.0236, -0.621933, 23.5441, -7.46486, 17.1651, -9.55255, 17.3971, -13.38, 12.5258, -19.527, 13.3377, -23.3544, 16.9332, -26.1379, 16.8172, -26.6019, 13.6857, -22.6585, 10.7861, -22.4265, 2.31946, -26.9498, -3.01572, -29.9653, -3.01572, -30.4293, -4.4075, -26.7178, -4.9874, -20.1069, -11.5984, -20.1069, -13.5701, -18.2512, -15.5417, -18.2512, -19.9491, -22.6585, -23.3125 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+[node name="Enemigo18" type="KinematicBody2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 1203.33, 348.148 )
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0.358475, 0.71698 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Enemigo18"]
+
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 11 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemigo18"]
+
+transform/pos = Vector2( 0.358475, 0.71698 )
+build_mode = 1
+polygon = Vector2Array( -22.2178, -26.8618, -18.7213, -26.687, -15.7493, -23.5402, -12.078, -22.666, -0.889267, -31.2324, -0.585968, -33.1523, 1.85576, -32.8953, 2.11278, -31.0961, 8.9239, -25.1846, 12.2652, -23.1284, 15.992, -23.2569, 19.7189, -26.7267, 23.3172, -27.2408, 24.0883, -24.4135, 20.1044, -20.3011, 20.1044, -16.1888, 21.3895, -13.7471, 20.8755, -11.4339, 27.6866, -6.03638, 31.4134, -5.39383, 31.2849, -2.56656, 27.9436, -2.95209, 21.8495, 4.10239, 19.2048, 8.35693, 19.4429, 12.2939, 21.4146, 14.0336, 23.5202, 16.054, 23.7772, 19.2668, 19.5363, 19.6523, 17.2392, 16.1213, 12.8319, 15.3094, 10.9762, 17.3971, 9.12053, 16.7012, 4.82921, 21.9203, 1.81367, 22.3843, 1.92966, 26.4436, 1.0018, 27.3715, -0.389969, 27.0236, -0.621933, 23.5441, -7.46486, 17.1651, -9.55255, 17.3971, -13.38, 12.5258, -19.527, 13.3377, -23.3544, 16.9332, -26.1379, 16.8172, -26.6019, 13.6857, -22.6585, 10.7861, -22.4265, 2.31946, -26.9498, -3.01572, -29.9653, -3.01572, -30.4293, -4.4075, -26.7178, -4.9874, -20.1069, -11.5984, -20.1069, -13.5701, -18.2512, -15.5417, -18.2512, -19.9491, -22.6585, -23.3125 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
